@@ -17,9 +17,9 @@ jobs:
       - name: Generate Breakout SVG
         uses: cyprieng/github-breakout@v1
         with:
-          github_user_name: ${{ github.repository_owner }}
-          svg_out_path: dist/github-breakout.svg
-          svg_dark_out_path: dist/github-breakout-dark.svg
+          github_username: ${{ github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output_path: dist/github-breakout.svg
 
       - name: Push Breakout SVG to output branch
         uses: crazy-max/ghaction-github-pages@v4
